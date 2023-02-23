@@ -1,0 +1,62 @@
+import 'package:get/get.dart';
+import 'package:demandium_provider/core/helper/core_export.dart';
+
+
+class TransactionCard extends StatelessWidget {
+  final String amount;
+  final Color amountTextColor;
+  final String title;
+  final Color borderColor;
+  final Color backgroundColor;
+
+  TransactionCard({required this.amount,required this.amountTextColor,required this.title,
+     required this.borderColor,required this.backgroundColor});
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: Container(
+        height: 80,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          border: Border.all(color: borderColor,width:Get.isDarkMode? 0.6:1)
+        ),
+        child: Stack(
+          children: [
+            Positioned(
+              bottom: 0,
+              left: 0,
+              child: Container(
+                height: 50,
+                width:  MediaQuery.of(context).size.width*.30,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(300),
+                      bottomLeft: Radius.circular(50),topLeft: Radius.circular(20),
+                    ),
+                    gradient: LinearGradient(
+                        begin:Alignment.bottomCenter,
+                        end: Alignment.topCenter,colors: [backgroundColor,Get.isDarkMode?Colors.transparent:Colors.white]
+                    )
+                ),
+              ),
+            ),
+
+            Padding(
+              padding:  EdgeInsets.symmetric(horizontal: Dimensions.PADDING_SIZE_DEFAULT),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text("$amount",style: ubuntuBold.copyWith(color: amountTextColor,fontSize: Dimensions.fontSizeLarge
+                  ),),
+                  Text(title,style: ubuntuMedium.copyWith(fontSize: 14)),
+                ],
+              ),
+            )
+          ],
+        ),
+      )
+    );
+  }
+}

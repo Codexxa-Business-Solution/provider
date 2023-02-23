@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "412057622486",
+    "project_id": "citifixprovider-8a6c3",
+    "storage_bucket": "citifixprovider-8a6c3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:412057622486:android:de463dc28ab6acdd253677",
+        "android_client_info": {
+          "package_name": "com.citifix.provider"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "412057622486-1rlp8bj951akdfrob8qtrvpebsjgson5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.citifix.provider",
+            "certificate_hash": "62bc7fefe6c60ac1ee214699f00e280c56c751bf"
+          }
+        },
+        {
+          "client_id": "412057622486-evomsfgva9qc966ofvnnc5831epne046.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABYhokGh8SfgfaMoYtTohY4Cuumh9_WqA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "412057622486-evomsfgva9qc966ofvnnc5831epne046.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
